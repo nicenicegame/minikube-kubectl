@@ -1,25 +1,20 @@
-# Example-3
+# Getting Started
 
-Example number 3 from Chapter 2 of [Bootstrapping Microservices](https://www.bootstrapping-microservices.com).
+Make sure minikube is running on local machine
 
-You need Node.js installed to run this.
+Create service and deployment
+```
+kubectl create -f deployment.yaml
+```
 
-Before running install dependencies:
+Open minikube dashboard
+```
+minikube dashboard
+```
 
-    npm install
+Connect Kubernetes cluster to local machine
+```
+minikube tunnel
+```
 
-Set the PORT number (on MacOS/Linux):
-    export PORT=3000
-
-Set the PORT number (on Windows):
-    set PORT=3000
-
-To start the microservice:
-
-    node index.js
-
-Or 
-
-    npm start
-
-Then point your browser at http://localhost:3000/videos
+Open browser at `localhost:8080`
